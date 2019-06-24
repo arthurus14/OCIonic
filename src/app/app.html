@@ -1,0 +1,24 @@
+<ion-menu [content]="content">
+	<ion-header>
+		<ion-toolbar>
+			<ion-title>MENU</ion-title>
+		</ion-toolbar>
+	</ion-header>
+	<ion-content>
+		<ion-list>
+			<button ion-item icon-start (click)="onNavigate(oPage)">
+				<ion-icon name="settings"></ion-icon>
+				Options
+			</button>
+			<button ion-item icon-start (click)="onNavigate(tabsPage)">
+				<ion-icon name="book"></ion-icon>
+				Livres
+			</button>
+			<button ion-item icon-start (click)="onNavigate(discPage)">
+				<ion-icon name="disc"></ion-icon>
+				CDs
+			</button>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+<ion-nav [root]="tabsPage" #content></ion-nav>

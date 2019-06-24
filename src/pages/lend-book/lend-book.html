@@ -1,0 +1,45 @@
+<!--
+  Generated template for the LendBookPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+  <ion-buttons>
+    <button ion-button clear (click)="dismissModal()">Fermer</button>
+  </ion-buttons>
+  
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card>
+  <ion-card-header>
+    <ion-card-title>{{book.name}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <p>{{book.description}}</p>
+  
+  </ion-card-content>
+</ion-card>
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <button ion-button full icon-start color="danger" [disabled] ="!book.isOn" (click)="onToggleBook()">
+      <ion-icon name="power" icon-start ></ion-icon>
+      Prêter
+    </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-button full icon-start color="secondary" [disabled] ="book.isOn" (click)="onToggleBook()">
+      <ion-icon name="power" icon-start ></ion-icon>
+      Restitué
+    </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
